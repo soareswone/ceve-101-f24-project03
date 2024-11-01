@@ -26,7 +26,7 @@ using RainwaterHarvesting         # <2>
 Next, we specify the path to the rainfall data file and read it in.
 
 ```{julia}
-filepath = "data/1.txt" # <1>   
+filepath = "data/30.txt" # <1>   
 rainfall_data = RainfallData(filepath) # <2>
 ```
 
@@ -50,7 +50,14 @@ plot(rainfall_data) # <1>
 
 ### Discussion
 
-*Insert discussion here*
+Select a different station (not 1.txt) from the data folder.
+Update the filepath variable to point to your chosen station.
+Repeat the steps provided to load and plot the data for your station.
+Identify which years are kept after data cleaning.
+Discuss whether the available data is sufficient for meaningful risk assessments.
+Research the years of major droughts in Ceará, Brazil.
+Determine if your data includes these years.
+Discuss the implications of missing data during drought years on your analysis. Use the provided Discussion section.P
 
 ## Understanding the Theoretical Model
 
