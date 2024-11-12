@@ -1,7 +1,7 @@
 ---
 title: "CEVE 101: Project 03"
-author: "Jessica Xu(jwx2)"
-date: "2024-10-23"
+author: "Jessica Xu ( jwx2 )"
+date: "2024-11-26"
 output: html_document
 kernel: julia-1.11
 code-annotations: hover
@@ -9,7 +9,6 @@ format:
     html: default
     docx: default 
 ---
-
 
 We begin by loading the required packages.
 
