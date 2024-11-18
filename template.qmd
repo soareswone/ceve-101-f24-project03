@@ -143,9 +143,9 @@ You will have the opportunity to change these values later.
 ```{julia}
 #| output: false
 param = ModelParameters(          # <1>
-    runoff_coefficient=0.85,      # <2>
+    runoff_coefficient=0.80,      # <2>
     roof_area_m2=45.0,            # <3>
-    first_flush_mm=2.0,           # <4>
+    first_flush_mm=2.8,           # <4>
     tank_capacity_L=16000.0       # <5>
 )
 ```
@@ -183,17 +183,18 @@ Note any periods when the tank runs dry or overflows.
 ## Modify Model Parameters
 Adjust parameters like roof_area_m2 or tank_capacity_L in the param object.
     I adjusted the parameters;
-    1 - 
-    2 - 
+    1 - first flush
+    2 - runoff coefficient 
 Rerun the simulation with your new parameters.
     I reran the simulation with the new parameters. 
 Plot the results to visualize the impact.
-    I plotted the results to visualize impact. 
+    I plotted the results to visualize impact. (?) 
 Explain why you chose to modify these parameters.
+I chose to modify the parameters because:
+Flush: infrequent rain or unpredictable dry/wet seasons might force households to use a larger first flush. I added 0.8 to the parameter value. 
+Runoff coefficient: Roof infrastructure may not be consistent throughout all of the region, so I think it may be necessary to decrease the runoff coefficient to account for things like gutter efficiency, roofs of differently porous materials, rapid evaporation during heat waves and roof slope and design. I decreased the parameter value by 0.05. 
 
 Discuss how the changes affect the simulation outcomes.
-
-
 
 ### Reliability Analysis
 
