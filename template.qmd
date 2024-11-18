@@ -122,12 +122,15 @@ How does this compare to your household's water usage?
 ## Discussion Responses
 Step 1> Discuss limiting assumptions and approximations in the model outlined. 
 Some of the limiting assumptions include: 
-There is a fixed consumption amount of around 74 liters per day per household. Jousehold sizes may vary, and individual practices might also vary so an average household might not actually use 74 liters per day of water during the dry season. Considering changing climates and seasons, one might have to use less or more water per day during certain periods of future years that would also differ from 74.1 L/day. 
+There is a fixed consumption amount of around 74 liters per day per household. Household sizes may vary, and individual practices might also vary so an average household might not actually use 74 liters per day of water during the dry season. Considering changing climates and seasons, one might have to use less or more water per day during certain periods of future years that would also differ from 74.1 L/day. 
 The same flush volume is used. However, the flush volume may be different -- stormwater may be more diluted when more rain falls, and perhaps one would change one's flush volume on an individual/household level. 
 The runoff coefficient is also held constant, although climactice conditions and daily weather (for example) might change the amount of runoff off roofs or other surfaces of homes. 
 Again, considering climactic changes and weather changes, it may not be accurate to assume that the rainy season lasts 150 days. Some rainy seasons might have more or less rain, which could alter water use and where people source water from.  
+
 Step 2 > Discuss how you might modify the model to relax these assumptions. Provide mathematical equations, but you don’t need to implement them in code.
 
+To relax these assumptions, you could incorporate more factors into various values/ 
+The runoff coefficient could be written instead as n_t =n_0 -k(Temperature) and adjust for evaporation. The household consumption quantity C_t could be dependent on temperature/heat index for that day, and how big the household is. For example, Ct = C0 + a(# of members) + b(Temperature) where a and b are constants. One should also consider changing the 150 day hard cutoff for use of rainwater, and instead base the cutoff on a minimum eg. limiting value for preciptation in a week to determine when the 'dry season' has come. 
 
 
 ## Model Implementation and Testing
@@ -176,6 +179,21 @@ plot(p2, p1, layout=(2, 1), size=(1000, 700), link=:x)
 
 Observe how the tank's water level responds to rainfall events.
 Note any periods when the tank runs dry or overflows.
+
+## Modify Model Parameters
+Adjust parameters like roof_area_m2 or tank_capacity_L in the param object.
+    I adjusted the parameters;
+    1 - 
+    2 - 
+Rerun the simulation with your new parameters.
+    I reran the simulation with the new parameters. 
+Plot the results to visualize the impact.
+    I plotted the results to visualize impact. 
+Explain why you chose to modify these parameters.
+
+Discuss how the changes affect the simulation outcomes.
+
+
 
 ### Reliability Analysis
 
