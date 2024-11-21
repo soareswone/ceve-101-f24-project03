@@ -73,52 +73,6 @@ My data includes the years 1980 until around 2020.
 5. Discuss the implications of missing data during drought years on your analysis. Use the provided Discussion section.
 Missing data from the 1800s could cause an underrepresentation of the extremity of droughts that occur in the Ceará region. It can also prove to be a challenge for calibrating models to predict rainfall and simulate how impactful future droughts will be. Having data for drought years would also help with contextualizing the current state of water infrastructure and water security in Ceará, Brazil. 
 ## Understanding the Theoretical Model
-
-Let's explore the model that simulates the rainwater harvesting system.
-
-### Mass Balance Equation
-
-The mass balance model for the rainwater tank is given by:
-
-$$
-V_{t+1} = V_t + Q_t - C_t | 0 \leq V_t \leq V_\text{max}
-$$
-
-- $V_t$: the volume of water in the tank at time $t$
-- $Q_t$ is the volume of water added to the tank at time $t$
-- $C_t$ is the volume of water consumed at time $t$
-- $V_\text{max}$: the maximum volume of the tank
-
-### Inflow ($Q_t$)
-
-Inflow is calculated as
-
-$$
-Q_t = \eta \times A \times \max(P_t - F, 0).
-$$
-
-- $\eta$: the runoff coefficient, which accounts for losses due to evaporation, spilling, etc.
-- $A$: the area of the roof (we will use square meters)
-- $P_t$: the precipitation at time $t$ (we will use millimeters per day)
-- $F$: the first flush volume (we will use millimeters). The first flush volume is often discarded, so that each time it rains the first bit of water (which is usually dirty) is not used (see [here](https://rainwaterharvesting.tamu.edu/pre-storage-treatment/) for more details).
-
-### Consumption
-
-Consumption is modeled as:
-
-$$
-C_t = \begin{cases}
-    74.1 & \quad \text{day of year} > 150 \\
-    0 & \quad \text{day of year} \leq 150
-\end{cases}
-$$
-
-This makes two major assumptiuons.
-First, the household begins using water from the tank after the 150th day of the year.
-This is based on the idea that the rainy season lasts for about the first 150 days of the year, and so they may have other sources of water before then.
-The second assumption is that each household consumes 74.1 liters per day during the dry season.
-How does this compare to your household's water usage?
-
 ## Discussion Responses
 Step 1> Discuss limiting assumptions and approximations in the model outlined. 
 Some of the limiting assumptions include: 
